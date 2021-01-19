@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+admin.site.site_header = "Neelarjun Administration"
+admin.site.site_title = "Nellarjun Engineering College"
+admin.site.index_title = "Nellarjun Engineering College Administration Panel"
 
 urlpatterns = [
     path('', admin.site.urls),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
