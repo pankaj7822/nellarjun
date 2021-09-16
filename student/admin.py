@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Department,Complaint,Payment,Student
+from .models import Department,Complaint,Payment,Student,Notice
 
 admin.site.register(Department)
+admin.site.register(Notice)
 
 @admin.register(Student)    
 class StudentAdmin(admin.ModelAdmin):

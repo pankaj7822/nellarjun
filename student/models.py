@@ -40,4 +40,13 @@ class Payment(models.Model):
     def __str__(self):
         return self.student.name+"-"+self.amount
 
+
+class Notice(models.Model):
+    id=models.AutoField(primary_key=True)
+    title=models.CharField(max_length=200,null=False,blank=False)
+    text=models.CharField(max_length=500,null=False,blank=False)
+    position=models.IntegerField(null=False,blank=False)
+    link=models.CharField(max_length=500,null=True,blank=True)
+    def __str__(self):
+        return self.title
     
